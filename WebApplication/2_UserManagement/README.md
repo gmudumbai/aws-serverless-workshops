@@ -27,7 +27,7 @@ Asia Pacific (Sydney) | [![Launch Module 1 in ap-southeast-2](http://docs.aws.am
 1. Provide the name of your website bucket from module 1 for the  **Website Bucket Name** (e.g. `wildrydes-yourname`) and choose **Next**.
 
     **Note:** You must specify the same bucket name you used in the previous module. If you provide a bucket name that does not exist or that you do not have write access to, the CloudFormation stack will fail during creation.
-    
+
     ![Speficy Details Screenshot](../images/module2-cfn-specify-details.png)
 
 1. On the Options page, leave all the defaults and choose **Next**.
@@ -82,24 +82,24 @@ Use the Amazon Cognito console to create a new user pool using the default setti
 
 </p></details>
 
-### 2. Add an App to Your User Pool
+### 2. Add an App Client to Your User Pool
 
-From the Amazon Cognito console select your user pool and then select the Apps section. Add a new app and make sure the Generate client secret option is deselected. Client secrets aren't currently supported with the JavaScript SDK. If you do create an app with a generated secret, delete it and create a new one with the correct configuration.
+From the Amazon Cognito console select your user pool and then select the **App clients** section. Add a new app and make sure the Generate client secret option is deselected. Client secrets aren't supported with the JavaScript SDK. If you do create an app with a generated secret, delete it and create a new one with the correct configuration.
 
 <details>
 <summary><strong>Step-by-step instructions (expand for details)</strong></summary><p>
 
-1. From the Pool Details page for your user pool, select **Apps** from the left navigation bar.
+1. From the Pool Details page for your user pool, select **App clients** from the left navigation bar.
 
-1. Click **Add an app**.
+1. Click **Add an app client**.
 
 1. Give the app a name such as `WildRydesWebApp`.
 
-1. **Uncheck** the Generate client secret option. Client secrets aren't currently supported for use with browser-based applications.
+1. **Uncheck** the Generate client secret option. Client secrets aren't supported for use with browser-based applications.
 
-1. Click **Create app**.
+1. Click **Create app client**.
 
-    ![Add app screenshot](../images/add-app.png)
+   <kbd>![Create app client screenshot](../images/add-app.png)</kbd>
 
 1. Note the **App client id** for the newly created application.
 
@@ -122,7 +122,7 @@ The [/js/config.js](../1_StaticWebHosting/website/js/config.js) file contains se
 
     ![Pool ID](../images/pool-id.png)
 
-    You can find the value for `userPoolClientId` by selecting **Apps** from the left navigation bar. Use the value from the **App client id** field for the app you created in the previous section.
+    You can find the value for `userPoolClientId` by selecting **App clients** from the left navigation bar. Use the value from the **App client id** field for the app you created in the previous section.
 
     ![Pool ID](../images/client-id.png)
 
@@ -166,7 +166,7 @@ The [/js/config.js](../1_StaticWebHosting/website/js/config.js) file contains se
 
 </p>
 
-## Test Your Implementation
+## Implementation Validation
 
 1. Visit `/register.html` under your website domain, or choose the **Giddy Up!** button on the homepage of your site.
 
